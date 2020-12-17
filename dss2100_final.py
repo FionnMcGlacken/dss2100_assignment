@@ -1,6 +1,5 @@
 def draw_boot_reps(data, func, size):
     boot_replicates = np.empty(size)
-    boot_sample = np.random.choice(data, len(data))
     for i in range(size):
         boot_replicates[i] = func(np.random.choice(data, len(data)))
     return boot_replicates
